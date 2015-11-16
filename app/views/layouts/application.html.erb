@@ -1,16 +1,30 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Project2</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
-  <p class="notice"><%= notice %></p>
-  <p class="alert"><%= alert %></p>
-
-  <%= yield %>
-
-</body>
+  <head>
+    <title>the food life</title>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+    <link href='https://fonts.googleapis.com/css?family=Raleway:400,700,200,300|Vollkorn:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+  </head>
+  <body>
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
+    <nav>
+      <div id="logo-div">
+        <h1 id="logo">the food life</h1>
+      </div>
+      <div id="nav-options-container">
+        <h1 id="nav-options">Recipes</h1>
+        <h1 id="nav-options">Boxes</h1>
+        <h1 id="nav-options">Jordan</h1>
+        <%= image_tag 'jordan.jpg', id: 'profile-nav-photo' %>
+      </div>
+    </nav>
+    <section id="main-content">
+      <%= yield %>
+    </section>
+    <footer>
+    </footer>
+  </body>
 </html>
