@@ -31,13 +31,17 @@
       <%= yield %>
     </section>
     <footer>
-      <section id="login-container">
+      <section id="footer-text-container">
+        <%= link_to 'the food life', recipes_path, id: 'logo', class: 'footer-text' %>
+        <section id="login-container">
         <% if current_user %>
-          <%= link_to 'Signout', destroy_user_session_path, :method => :delete, id: 'login-options' %>
+          <%= link_to 'Signout', destroy_user_session_path, :method => :delete, id: 'login-options', class: 'footer-text' %>
         <% else %>
-          <%= link_to 'Login', new_user_session_path, id: 'login-options' %>
-          <%= link_to 'Signup', new_user_registration_path, id: 'login-options' %>
+          <%= link_to 'Login', new_user_session_path, id: 'login-options', class: 'footer-text' %>
+          <%= link_to 'Signup', new_user_registration_path, id: 'login-options', class: 'footer-text' %>
         <% end %>
+        </section>
+      </section>
     </footer>
   </body>
 </html>

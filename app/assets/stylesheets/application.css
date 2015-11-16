@@ -21,12 +21,6 @@
 CORE STYLES
 ************************/
 
-* {
-  padding: 0;
-  border: 0;
-  margin: 0;
-}
-
 body {
   margin: 0 auto;
 }
@@ -37,24 +31,11 @@ a {
 }
 
 
+
 /************************
 CORE STYLES
 ************************/
 
-/*#login-container {
-  margin-top: 50px;
-}*/
-
-/*#login-options {
-  margin-top: 2px;
-  margin-right: 20px;
-  display: inline-block;
-  font-family: 'Raleway', sans-serif;
-  font-size: 10px;
-  font-weight: 400;
-  text-transform: uppercase;
-  letter-spacing: .75px;
-}*/
 
 
 /************************
@@ -121,10 +102,95 @@ FEATURED PHOTO
 
 
 /************************
+NEW RECIPE
+************************/
+
+#new-recipe-container {
+  margin: 0 auto;
+  max-width: 800px;
+  margin-top: 40px;
+  border-top: 1px solid #7d7d7d;
+  padding-top: 50px;
+  height: 560px;
+}
+
+#subhead {
+  font-family: 'Vollkorn', serif;
+  font-style: italic;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+form {
+  float: left;
+  width: 310px;
+}
+
+.form-label {
+  display: block;
+  font-family: 'Raleway', sans-serif;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: .5px;
+  margin-bottom: 10px;
+}
+
+.form-text {
+  width: 300px;
+  height: 35px;
+  display: block;
+  margin-bottom: 20px;
+}
+
+#submit-button {
+  background-color: red;
+  width: 300px;
+  height: 100px;
+}
+
+#new-form-image {
+  float: right;
+  width: 370px;
+  border: 10px solid white;
+  box-shadow: 0px 4px 6px #ccc;
+}
+
+
+
+/************************
 FOOTER
 ************************/
 
 footer {
+  margin-top: 150px;
+  background-color: black;
+  /*background-color: #3c3c3c;*/
+  height: 350px;
+  width: 100%
+}
+
+#footer-text-container {
   margin: 0 auto;
   max-width: 800px;
+  margin-top: 40px;
+  padding-top: 60px;
+}
+
+.footer-text {
+  color: white;
+}
+
+#login-container {
+  display: block;
+}
+
+#login-options {
+  margin-top: 40px;
+  margin-right: 20px;
+  display: block;
+  font-family: 'Raleway', sans-serif;
+  font-size: 10px;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: .75px;
 }
