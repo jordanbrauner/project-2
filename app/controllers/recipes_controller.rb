@@ -1,5 +1,8 @@
 class RecipesController < ApplicationController
 
+  before_action :set_post, only: [:index, :show, :new, :create, :edit, :update, :destroy]
+  before_action :authenticate_user!, only: [:new, :create, :edit, :update, :destroy]
+
   def index
     @recipes = Recipe.all
   end
@@ -9,11 +12,12 @@ class RecipesController < ApplicationController
   end
 
   def new
-    @recipe = Recipe.new
+    @recipe = @user.recipes.new
   end
 
   def create
-    @recipe = Recipe.new(recipe_params)
+    @recipe = @user.recipes.new(recipe_params)
+    # @recipe = Recipe.new(recipe_params)
     if @recipe.save
       flash[:notice] = "#{@recipe.title} was created."
       redirect_to @recipe
@@ -39,8 +43,12 @@ class RecipesController < ApplicationController
   def destroy
   end
 
+  def set_post
+    @user = current_user
+  end
+
   private
-    def recipe_params
-      params.require(:recipe).permit(:title, :description, :photo_url, :ingredients, :directions)
-    end
+  def recipe_params
+    params.require(:recipe).permit(:title, :description, :photo_url, :ingredients, :directions)
+  end
 end

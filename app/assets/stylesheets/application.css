@@ -116,6 +116,14 @@ nav {
 MAIN - FEATURED PHOTO
 ************************/
 
+.main-container {
+  margin: 0 auto;
+  max-width: 820px;
+  margin-top: 70px;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
 #featured-photo-container {
   margin-top: 15px;
   height: 500px;
@@ -165,15 +173,19 @@ MAIN - THE LATEST
 ************************/
 
 #the-latest-container {
-  margin: 0 auto;
-  max-width: 820px;
-  padding-left: 40px;
-  padding-right: 40px;
   margin-top: 80px;
 }
 
 #the-latest-recipes-container {
-  margin-top: 20px;
+  margin-bottom: 40px;
+}
+
+#the-latest-subhead {
+  font-family: 'Vollkorn', serif;
+  font-style: italic;
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 12px;
 }
 
 .the-latest-recipes {
@@ -238,21 +250,12 @@ MAIN - THE LATEST
 
 
 
-
 /************************
 RECIPE#SHOW
 ************************/
 
-/*
-Left Side
-*/
-
 #recipe-content-container {
-  margin: 0 auto;
-  max-width: 820px;
   margin-top: 40px;
-  padding-left: 40px;
-  padding-right: 40px;
 }
 
 #recipe-content {
@@ -278,17 +281,13 @@ Left Side
   padding-top: 24px;
 }
 
-/*#recipe-photo-url {
-  float: right;
-  width: 400px;
-}*/
-
 .recipe-show-subhead {
   font-family: 'Vollkorn', serif;
   font-style: italic;
   font-size: 16px;
   font-weight: 700;
   letter-spacing: .5px;
+  margin-bottom: 3px;
 }
 
 #recipe-ingredients {
@@ -307,34 +306,27 @@ Left Side
   margin-bottom: 20px;
 }
 
-#edit-recipe {
+.edit {
   font-family: 'Raleway', sans-serif;
   font-size: 12px;
   text-transform: uppercase;
   font-weight: 700;
-  margin-bottom: 9px;
+  margin-top: 30px;
 }
 
 
-/*
-Right Side
-*/
 
-#user-recipe-container {
+/************************
+USER SIDEBAR
+************************/
+
+.user-sidebar-container {
   float: right;
   width: 300px;
   text-align: center;
-  padding-top: 70px;
 }
 
-#recipe-user-photo {
-  margin: 0 auto;
-  border-radius: 360px;
-  height: 150px;
-  width: 150px;
-}
-
-.user-subhead {
+.user-sidebar-subhead {
   margin-top: 20px;
   font-family: 'Vollkorn', serif;
   color: #aeaeae;
@@ -344,22 +336,99 @@ Right Side
   letter-spacing: .5px;
 }
 
-#recipe-user-name {
+#user-sidebar-photo {
+  border-radius: 360px;
+  height: 150px;
+  width: 150px;
+}
+
+#user-sidebar-name {
   margin-top: 5px;
   font-family: 'Raleway', sans-serif;
-  font-size: 15px;
+  font-size: 14px;
   text-transform: uppercase;
   font-weight: 700;
   letter-spacing: .75px;
 }
 
-#number-of-contributions {
+#user-sidebar-contributions {
   margin-top: -10px;
+  font-family: 'Raleway', sans-serif;
+  font-size: 50px;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+
+
+
+/************************
+USER PROFILE
+************************/
+
+#user-profile-container {
+  display: inline-block;
+  width: 500px;
+}
+
+.user-profile-subhead {
+  font-family: 'Vollkorn', serif;
+  font-style: italic;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-bottom: 3px;
+  color: #aeaeae;
+}
+
+#user-profile-name {
+  font-family: 'Raleway', sans-serif;
+  font-size: 35px;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-bottom: 9px;
+}
+
+#user-contributions {
   font-family: 'Raleway', sans-serif;
   font-size: 60px;
   text-transform: uppercase;
   font-weight: 400;
+  margin-bottom: 9px;
 }
+
+#user-column-container {
+  margin-top: 70px;
+  margin-bottom: 70px;
+}
+
+.profile-column {
+  vertical-align: top;
+  display: inline-block;
+  width: 20%;
+  border-top: 5px solid black;
+  margin-right: 80px;
+  padding-top: 10px;
+}
+
+.user-profile-column-subhead {
+  font-family: 'Vollkorn', serif;
+  font-style: italic;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: .5px;
+  margin-bottom: 3px;
+}
+
+.column-list li {
+  list-style: none;
+  font-family: 'Raleway', sans-serif;
+  font-size: 11px;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: .5px;
+  margin-top: 8px;
+}
+
 
 /************************
 NEW RECIPE
@@ -367,7 +436,7 @@ NEW RECIPE
 
 #new-recipe-container {
   margin: 0 auto;
-  max-width: 800px;
+  max-width: 820px;
   margin-top: 40px;
   border-top: 1px solid #7d7d7d;
   padding-top: 50px;
@@ -382,6 +451,7 @@ NEW RECIPE
 }
 
 form {
+  margin-top: 25px;
   float: left;
   width: 310px;
 }

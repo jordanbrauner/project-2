@@ -1,0 +1,53 @@
+<section id="featured-photo-container"></section>
+<div class="main-container">
+  <section id="user-profile-container">
+    <div id="user-profile-container">
+      <h3 id="user-profile-name">Jordan Brauner</h2>
+      <p id="recipe-description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+    </div>
+  </section>
+  <section class="user-sidebar-container">
+    <%= image_tag 'jordan.jpg', id: 'user-sidebar-photo' %>
+    <p class="user-sidebar-subhead">Culinary</br>Contributions:</p>
+    <p id="user-sidebar-contributions"><%= @user.recipes.length %></p>
+  </section>
+  <section id="user-column-container">
+    <div class="profile-column">
+      <p class="user-profile-column-subhead">Recipes</p>
+      <ul class="column-list">
+        <li>Short Pasta of Choice</li>
+        <li>Table Butter</li>
+        <li>Cherrybomb Sushi</li>
+        <li>Basil Pesto with Pine Nuts</li>
+        <li>Scoobi Doo Pasta</li>
+        <li>Canadian Burrata</li>
+        <li>Handful of Cherry Tomatoes</li>
+        <li>White Wine Reduction</li>
+        <li>Garlic Potatoes with Parsley</li>
+        <li>Frozen Pea Splendor</li>
+      </ul>
+    </div>
+    <div class="profile-column">
+      <p class="user-profile-column-subhead">Boards</p>
+      <ul class="column-list">
+        <li>Country Breakfast</li>
+        <li>Thanksgiving</li>
+        <li>The Perfect Brunch</li>
+        <li>Sweet and Savory</li>
+      </ul>
+    </div>
+    <div class="profile-column">
+      <p class="user-profile-column-subhead">Favorites</p>
+      <ul class="column-list">
+        <li>Table Butter</li>
+        <li>Handful of Cherry Tomatoes</li>
+        <li>Basil Pesto with Pine Nuts</li>
+        <li>Scoobi Doo Pasta</li>
+        <li>Short Pasta of Choice</li>
+        <li>Cherrybomb Sushi</li>
+        <li>Canadian Burrata</li>
+      </ul>
+    </div>
+  </section>
+  <p class="edit"><%= link_to "Edit Profile", user_path(@user) %></p>
+</div>

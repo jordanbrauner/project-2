@@ -1,12 +1,11 @@
-<div id="main-container">
-  <section id="featured-photo-container"></section>
+<section id="featured-photo-container"></section>
+<section id="quote-container">
+  <h2 id="quote">One cannot think well, love well, or sleep well if one has not dined well.</h3><p id="quote-byline">—Virginia Wolf</p>
+</section>
 
-  <section id="quote-container">
-    <h2 id="quote">One cannot think well, love well, or sleep well if one has not dined well.</h3><p id="quote-byline">—Virginia Wolf</p>
-  </section>
-
+<div class="main-container">
   <section id="the-latest-container">
-    <h3 class="subhead">The Latest</h3>
+    <h3 id="the-latest-subhead">The Latest</h3>
     <div id="the-latest-recipes-container">
       <% @recipes.each do |recipe| %>
         <div class="the-latest-recipes">
@@ -19,7 +18,5 @@
     </div>
     </div>
   </section>
-
-
 
 </div>

@@ -20,7 +20,7 @@
         <h1 id="nav-options">Boxes</h1>
         <h1 id="nav-options-bar">|</h1>
         <% if current_user %>
-          <h1 id="nav-options">Jordan</h1>
+          <%= link_to @user.email, user_path(@user), id: 'nav-options' %>
           <%= image_tag 'jordan.jpg', id: 'profile-nav-photo' %>
         <% else %>
           <%= link_to 'Login', new_user_session_path, id: 'nav-options' %>
