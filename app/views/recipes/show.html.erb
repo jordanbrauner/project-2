@@ -14,11 +14,11 @@
       <p class="edit"><%= link_to "Edit Recipe", edit_recipe_path(@recipe) %></p>
     </div>
     <div class="user-sidebar-container">
-      <%= image_tag 'jordan.jpg', id: 'user-sidebar-photo' %>
+      <%= image_tag @recipe.user.photo_url, id: 'user-sidebar-photo' %>
       <p class="user-sidebar-subhead">Chef</p>
-      <p id="user-sidebar-name">Jordan</p>
+      <p id="user-sidebar-name"><%= @recipe.user.username %></p>
       <p class="user-sidebar-subhead">Contributions:</p>
-      <p id="user-sidebar-contributions"><%= @user.recipes.length %></p>
+      <p id="user-sidebar-contributions"><%= @recipe.user.recipes.length %></p>
     </div>
   </section>
 

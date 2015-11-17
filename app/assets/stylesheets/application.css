@@ -352,7 +352,7 @@ USER SIDEBAR
 }
 
 #user-sidebar-contributions {
-  margin-top: -10px;
+  margin-top: -5px;
   font-family: 'Raleway', sans-serif;
   font-size: 50px;
   text-transform: uppercase;
@@ -388,6 +388,16 @@ USER PROFILE
   margin-bottom: 9px;
 }
 
+#user-bio {
+font-family: 'Raleway', sans-serif;
+font-size: 13px;
+font-weight: 300;
+line-height: 20px;
+margin-bottom: 20px;
+border-top: 1px solid #939393;
+padding-top: 24px;
+}
+
 #user-contributions {
   font-family: 'Raleway', sans-serif;
   font-size: 60px;
@@ -416,15 +426,15 @@ USER PROFILE
   font-size: 16px;
   font-weight: 700;
   letter-spacing: .5px;
-  margin-bottom: 3px;
+  margin-bottom: 20px;
 }
 
-.column-list li {
+.column-list {
   list-style: none;
   font-family: 'Raleway', sans-serif;
   font-size: 11px;
   text-transform: uppercase;
-  font-weight: 600;
+  font-weight: 400;
   letter-spacing: .5px;
   margin-top: 8px;
 }

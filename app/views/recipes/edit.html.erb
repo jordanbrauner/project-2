@@ -3,3 +3,5 @@
   <h2 class="subhead">Cook it.</h2>
   <%= render 'form' %>
 </section>
+
+<%= link_to 'Delete!', recipe_path(@recipe), method: :delete, class: 'delete' %>
