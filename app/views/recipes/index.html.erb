@@ -1,5 +1,25 @@
-<section id="featured-photo-container"></section>
-<section id="quote-container">
-  <h3 id="quote">The only think I like better than
-talking about Food is eating.</h3><p id="quote-byline">—John Waters</p>
-</section>
+<div id="main-container">
+  <section id="featured-photo-container"></section>
+
+  <section id="quote-container">
+    <h2 id="quote">One cannot think well, love well, or sleep well if one has not dined well.</h3><p id="quote-byline">—Virginia Wolf</p>
+  </section>
+
+  <section id="the-latest-container">
+    <h3 class="subhead">The Latest</h3>
+    <div id="the-latest-recipes-container">
+      <% @recipes.each do |recipe| %>
+        <div class="the-latest-recipes">
+          <%= image_tag recipe.photo_url, class: "small-recipe-thumbnail" %>
+          <p class="small-recipe-title"><%= link_to recipe.title, recipe_path(recipe) %></p>
+        </div>
+      <% end %>
+    <div id="add-recipe-container">
+      <%= link_to "Add your recipe", new_recipe_path, id: 'add-recipe' %>
+    </div>
+    </div>
+  </section>
+
+
+
+</div>

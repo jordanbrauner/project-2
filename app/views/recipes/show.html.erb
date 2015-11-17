@@ -1,5 +1,22 @@
-<%= @recipe.title %>
-<%= @recipe.description %>
-<%= @recipe.photo_url %>
-<%= @recipe.ingredients %>
-<%= @recipe.directions %>
+<div id="main-container">
+  <section id="featured-photo-container"></section>
+  <section id="recipe-content-container">
+    <div id="recipe-content">
+      <h3 id="recipe-title"><%= @recipe.title %></h2>
+      <p id="recipe-description"><%= @recipe.description %></p>
+      <%# image_tag current_user.photo_url, id: 'recipe-user-photo' %>
+      <p class="recipe-show-subhead">Ingredients</p>
+      <p id="recipe-ingredients"><%= @recipe.ingredients %></p>
+      <p class="recipe-show-subhead">Directions</p>
+      <p id="recipe-directions"><%= @recipe.directions %></p>
+      <p id="edit-recipe"><%= link_to "Edit Recipe", edit_recipe_path(@recipe) %></p>
+    </div>
+    <div id="user-recipe-container">
+      <%= image_tag 'jordan.jpg', id: 'recipe-user-photo' %>
+      <p class="user-subhead">Chef</p>
+      <p id="recipe-user-name">Jordan</p>
+      <p class="user-subhead">Contributions:</p>
+      <p id="number-of-contributions">4</p>
+    </div>
+  </section>
+</div>
