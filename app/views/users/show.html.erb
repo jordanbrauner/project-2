@@ -7,7 +7,7 @@
     </div>
   </section>
   <section class="user-sidebar-container">
-    <%= image_tag 'jordan.jpg', id: 'user-sidebar-photo' %>
+    <%= image_tag @user.photo_url, id: 'user-sidebar-photo' %>
     <p class="user-sidebar-subhead">Culinary</br>Contributions:</p>
     <p id="user-sidebar-contributions"><%= @user.recipes.length %></p>
   </section>
@@ -21,22 +21,22 @@
     <div class="profile-column">
       <p class="user-profile-column-subhead">Boards</p>
       <ul class="column-list">
-        <li>Country Breakfast</li>
-        <li>Thanksgiving</li>
-        <li>The Perfect Brunch</li>
-        <li>Sweet and Savory</li>
+        <li class="column-list">Country Breakfast</li>
+        <li class="column-list">Thanksgiving</li>
+        <li class="column-list">The Perfect Brunch</li>
+        <li class="column-list">Sweet and Savory</li>
       </ul>
     </div>
     <div class="profile-column">
       <p class="user-profile-column-subhead">Favorites</p>
       <ul class="column-list">
-        <li>Table Butter</li>
-        <li>Handful of Cherry Tomatoes</li>
-        <li>Basil Pesto with Pine Nuts</li>
-        <li>Scoobi Doo Pasta</li>
-        <li>Short Pasta of Choice</li>
-        <li>Cherrybomb Sushi</li>
-        <li>Canadian Burrata</li>
+        <li class="column-list">Table Butter</li>
+        <li class="column-list">Handful of Cherry Tomatoes</li>
+        <li class="column-list">Basil Pesto with Pine Nuts</li>
+        <li class="column-list">Scoobi Doo Pasta</li>
+        <li class="column-list">Short Pasta of Choice</li>
+        <li class="column-list">Cherrybomb Sushi</li>
+        <li class="column-list">Canadian Burrata</li>
       </ul>
     </div>
   </section>

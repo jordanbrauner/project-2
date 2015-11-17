@@ -15,15 +15,27 @@
         <%= link_to 'the food life', recipes_path, id: 'logo' %>
       </div>
       <div id="nav-options-container">
-        <h1 id="nav-options">Recipes</h1>
-        <h1 id="nav-options-bar">|</h1>
-        <h1 id="nav-options">Boxes</h1>
-        <h1 id="nav-options-bar">|</h1>
+        <h1 class="nav-options">Recipes</h1>
+        <h1 class="nav-options-bar">|</h1>
+        <h1 class="nav-options">Boxes</h1>
+        <h1 class="nav-options-bar">|</h1>
         <% if current_user %>
-          <%= link_to @user.username, user_path(@user), id: 'nav-options' %>
-          <%= image_tag current_user.photo_url, id: 'profile-nav-photo' %>
+          <div class="menu-wrap">
+            <div class="menu">
+              <ul class="clearfix">
+                <li>
+                  <%= link_to @user.username, user_path(@user), class: 'nav-options' %>
+                  <ul class="sub-menu">
+                    <%= link_to 'Signout', destroy_user_session_path, :method => :delete, class: 'sub-nav-options' %>
+                  </ul>
+                </li>
+            </div>
+          </div>
+          <%= link_to user_path(@user) do %>
+            <%= image_tag current_user.photo_url, id: 'profile-nav-photo' %>
+          <% end %>
         <% else %>
-          <%= link_to 'Login', new_user_session_path, id: 'nav-options' %>
+          <%= link_to 'Login', new_user_session_path, class: 'nav-options' %>
         <% end %>
       </div>
     </nav>
