@@ -649,6 +649,37 @@ form {
 
 
 /************************
+BOXES
+************************/
+
+#boxes-container {
+  border-top: 1px solid black;
+  max-width: 300px;
+  padding-top: 20px;
+}
+
+.boxes {
+  margin-bottom: 8px;
+  /*margin: 0 17px 40px 0;*/
+  /*height: 150px;*/
+  /*width: 150px;*/
+  /*background-color: lightgray;*/
+  /*vertical-align: top;*/
+  /*display: inline-block;*/
+
+}
+
+.box-title {
+  margin-top: 5px;
+  font-family: 'Raleway', sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .75px;
+}
+
+
+/************************
 FOOTER
 ************************/
 

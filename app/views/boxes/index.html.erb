@@ -9,18 +9,28 @@
 
 <div class="main-container">
 
+  <!-- User Sidebar -->
+  <section class="user-sidebar-container">
+    <%= link_to user_path(@user) do %>
+      <%= image_tag @user.photo_url, id: 'user-sidebar-photo' %>
+    <% end %>
+    <p class="user-sidebar-subhead">Chef</p>
+    <p id="user-sidebar-name"><%= @user.username %></p>
+    <p class="user-sidebar-subhead">Culinary<br>Contributions:</p>
+    <p id="user-sidebar-contributions"><%= @user.recipes.length %></p>
+  </section>
 
   <!-- My Boxes -->
   <div class="main-container">
     <section id="the-latest-container">
       <h3 id="the-latest-subhead">My Boxes</h3>
-      <div id="the-latest-recipes-container">
+      <div id="boxes-container">
         <% @user.boxes.each do |box| %>
-          <div class="the-latest-recipes">
+          <div class="boxes">
             <%= link_to box do %>
               <%# image_tag box.recipes.first.photo_url, class: "small-recipe-thumbnail" %>
             <% end %>
-            <p class="small-recipe-title"><%= link_to box.title, box_path(box) %></p>
+            <p class="box-title"><%= link_to box.title, box_path(box) %></p>
           </div>
         <% end %>
       </div>
@@ -31,18 +41,18 @@
   <div class="main-container">
     <section id="the-latest-container">
       <h3 id="the-latest-subhead">All Boxes</h3>
-      <div id="the-latest-recipes-container">
+      <div id="boxes-container">
         <% @boxes.each do |box| %>
-          <div class="the-latest-recipes">
+          <div class="boxes">
             <%= link_to box do %>
               <%# image_tag box.recipes.first.photo_url, class: "small-recipe-thumbnail" %>
             <% end %>
-            <p class="small-recipe-title"><%= link_to box.title, box_path(box) %></p>
+            <p class="box-title"><%= link_to box.title, box_path(box) %></p>
           </div>
         <% end %>
       </div>
     </section>
   </div>
 
-  <%= link_to "New Box", new_user_box_path(@user) %>
+  <%# link_to "New Box", new_user_box_path(@user) %>
 </div>
