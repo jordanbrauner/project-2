@@ -144,6 +144,7 @@ nav {
 
 .sub-menu {
   position: absolute;
+  padding-top: 2px;
   left: 0px;
   height: 50px;
   width: 100px;
@@ -174,6 +175,9 @@ MAIN - FEATURED PHOTO
   background-position: center
 }
 
+#featured-photo-container:hover {
+  opacity: .95;
+}
 
 
 /************************
@@ -394,6 +398,10 @@ USER PROFILE
   letter-spacing: .75px;
 }
 
+#profile-top-container {
+  display: block;
+}
+
 #user-profile-container {
   display: inline-block;
   min-width: 200px;
@@ -437,11 +445,12 @@ USER PROFILE
 }
 
 #user-column-container {
-  margin-top: 70px;
+  margin-top: 10px;
   margin-bottom: 70px;
 }
 
 .profile-column {
+  margin-top: 70px;
   vertical-align: top;
   display: inline-block;
   width: 20%;

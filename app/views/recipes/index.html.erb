@@ -1,10 +1,10 @@
 <!-- Featured Recipe -->
-<section id="featured-photo-container" style="background-image:url('<%= @recipe.photo_url %>');background-position: cover;"></section>
+<a href="<%= recipe_path(@recipe) %>"><section id="featured-photo-container" style="background-image:url('<%= @recipe.photo_url %>');background-position: cover;"></section></a>
 <section id="featured-user-recipe-container">
   <div id="featured-user-recipe-wrapper">
-    <span id="featured-user-recipe">Featured Recipe</span>
+    <%= link_to "Featured Recipe", recipe_path(@recipe), id: "featured-user-recipe" %>
     <span id="name-of-featured-user-recipe">|</span>
-    <span id="name-of-featured-user-recipe"><%= @recipe.title %></span>
+    <%= link_to @recipe.title, recipe_path(@recipe), id: "name-of-featured-user-recipe" %>
   </div>
 </section>
 
