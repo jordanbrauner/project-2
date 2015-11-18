@@ -44,6 +44,12 @@
     </section>
     <footer>
       <section id="footer-text-container">
+        <div id="social-media-wrapper">
+          <%= image_tag 'facebook.png', class: "social-media-icon" %>
+          <%= image_tag 'twitter.png', class: "social-media-icon" %>
+          <%= image_tag 'instagram.png', class: "social-media-icon" %>
+          <%= image_tag 'youtube.png', class: "social-media-icon" %>
+        </div>
         <%= link_to 'the food life', recipes_path, id: 'logo', class: 'footer-text' %>
         <section id="login-container">
         <% if current_user %>
