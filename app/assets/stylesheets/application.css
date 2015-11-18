@@ -538,7 +538,7 @@ USER SIDEBAR
 #user-sidebar-name {
   margin-top: 5px;
   font-family: 'Raleway', sans-serif;
-  font-size: 14px;
+  font-size: 17px;
   text-transform: uppercase;
   font-weight: 700;
   letter-spacing: .75px;
@@ -552,6 +552,22 @@ USER SIDEBAR
   font-weight: 400;
 }
 
+.sidebar-rule {
+    margin: 0 auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    width: 65px;
+    border-top: 8px solid black;
+}
+
+.user-sidebar-box-list {
+  margin-top: 8px;
+  font-family: 'Raleway', sans-serif;
+  font-size: 10px;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: .5px;
+}
 
 
 /************************

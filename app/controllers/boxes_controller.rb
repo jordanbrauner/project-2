@@ -4,11 +4,10 @@ class BoxesController < ApplicationController
   before_action :authenticate_user!, only: [:new, :create, :edit, :update, :destroy]
 
   def index
-    @boxes = Box.all
-    @recipes = Recipe.all
   end
 
   def show
+    @box = Box.find(params[:id])
   end
 
   def new
@@ -26,6 +25,8 @@ class BoxesController < ApplicationController
   end
 
   def set_post
+    @boxes = Box.all
+    @recipes = Recipe.all
     @user = current_user
   end
 

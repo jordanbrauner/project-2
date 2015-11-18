@@ -1,3 +1,36 @@
+<!-- Most Recent Recipe in the Box TODO -->
+<section id="featured-photo-container" style="background-image:url('<%= @recipes.last.photo_url %>');background-position: cover;"></section>
+<section id="featured-user-recipe-container">
+  <div id="featured-user-recipe-wrapper">
+    <span id="featured-user-recipe">Featured Recipe</span>
+    <span id="name-of-featured-user-recipe">|</span>
+    <span id="name-of-featured-user-recipe"><%= @recipes.last.title %></span>
+  </div>
+</section>
+
+<!-- Main content -->
 <div class="main-container">
-  <p>Showing Recipes in Box</p>
+
+  <!-- Box contents -->
+  <div id="recipe-content">
+    <h3 id="recipe-title"><%= @box.title %></h2>
+    <p id="recipe-description"></p>
+
+    <!-- Edit Box -->
+    <% if current_user == @box.user %>
+      <p class="edit">Edit Box</p>
+    <% end %>
+  </div>
+
+  <!-- User Sidebar -->
+  <div class="user-sidebar-container">
+    <%= link_to user_path(@box.user_id) do %>
+      <%= image_tag @box.user.photo_url, id: 'user-sidebar-photo' %>
+    <% end %>
+    <p class="user-sidebar-subhead">Chef</p>
+    <p id="user-sidebar-name"><%= @box.user.username %></p>
+    <p class="user-sidebar-subhead">Culinary<br>Contributions:</p>
+    <p id="user-sidebar-contributions"><%= @box.user.recipes.length %></p>
+  </div>
+
 </div>
