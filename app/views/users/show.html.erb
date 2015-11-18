@@ -30,32 +30,52 @@
 
   <!-- User Profile Columns -->
   <section id="user-column-container">
+
+    <!-- User Recipes -->
     <div class="profile-column">
       <p class="user-profile-column-subhead">Recipes</p>
-      <% @contributor.recipes.each do |recipe| %>
-        <p class="column-list"><%= link_to recipe.title, recipe_path(recipe) %></p>
-      <% end %>
+      <div class="column-list">
+        <% @contributor.recipes.each do |recipe| %>
+          <p><%= link_to recipe.title, recipe_path(recipe) %></p>
+        <% end %>
+      </div>
+      <!-- Add a Recipe -->
+      <div class="user-add-container">
+        <%= link_to "Add a recipe", new_recipe_path, class: 'user-add' %>
+      </div>
     </div>
+
+    <!-- User Boxes -->
     <div class="profile-column">
       <p class="user-profile-column-subhead">Boxes</p>
-      <ul class="column-list">
-        <li class="column-list">Country Breakfast</li>
-        <li class="column-list">Thanksgiving</li>
-        <li class="column-list">The Perfect Brunch</li>
-        <li class="column-list">Sweet and Savory</li>
-      </ul>
+      <div class="column-list">
+        <p>Country Breakfast</p>
+        <p>Thanksgiving</p>
+        <p>The Perfect Brunch</p>
+        <p>Sweet and Savory</p>
+      </div>
+      <!-- Add a Recipe Box -->
+      <div class="user-add-container">
+        <%= link_to "Add a Box", recipes_path,class: 'user-add' %>
+      </div>
     </div>
+
+    <!-- User Favorites -->
     <div class="profile-column">
       <p class="user-profile-column-subhead">Favorites</p>
-      <ul class="column-list">
-        <li class="column-list">Table Butter</li>
-        <li class="column-list">Handful of Cherry Tomatoes</li>
-        <li class="column-list">Basil Pesto with Pine Nuts</li>
-        <li class="column-list">Scoobi Doo Pasta</li>
-        <li class="column-list">Short Pasta of Choice</li>
-        <li class="column-list">Cherrybomb Sushi</li>
-        <li class="column-list">Canadian Burrata</li>
-      </ul>
+      <div class="column-list">
+        <p>Table Butter</p>
+        <p>Handful of Cherry Tomatoes</p>
+        <p>Basil Pesto with Pine Nuts</li>
+        <p>Scoobi Doo Pasta</p>
+        <p>Short Pasta of Choice</p>
+        <p>Cherrybomb Sushi</p>
+        <p>Canadian Burrata</p>
+      </div>
+      <!-- Browse Recipes -->
+      <div class="user-add-container">
+        <%= link_to "Browse", recipes_path, class: 'user-add' %>
+      </div>
     </div>
   </section>
   <p class="edit"><%= link_to "Edit Profile", user_path(@user) %></p>

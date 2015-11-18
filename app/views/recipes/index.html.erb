@@ -26,9 +26,12 @@
           <p class="small-recipe-title"><%= link_to recipe.title, recipe_path(recipe) %></p>
         </div>
       <% end %>
-    <div id="add-recipe-container">
-      <%= link_to "Add your recipe", new_recipe_path, id: 'add-recipe' %>
-    </div>
+
+      <!-- Add a Recipe -->
+      <div id="add-recipe-container">
+        <%= link_to "Add a recipe", new_recipe_path, id: 'add-recipe' %>
+      </div>
+
     </div>
   </section>
 </div>

@@ -270,9 +270,9 @@ MAIN - THE LATEST
 }
 
 #add-recipe-container {
-  margin-top: 20px;
+  margin-top: 40px;
   height: 40px;
-  width: 140px;
+  width: 100px;
   background-color: black;
   text-align: center;
   vertical-align: middle;
@@ -469,14 +469,44 @@ USER PROFILE
 }
 
 .column-list {
-  list-style: none;
+  margin-top: 8px;
+  padding-bottom: 40px;
+  border-bottom: 1px solid #aeaeae;
+}
+
+.column-list p {
+  margin-top: 8px;
   font-family: 'Raleway', sans-serif;
   font-size: 11px;
   text-transform: uppercase;
   font-weight: 400;
   letter-spacing: .5px;
-  margin-top: 8px;
 }
+
+.user-add-container {
+  /*margin-top: 40px;*/
+  /*height: 40px;*/
+  /*width: 100px;*/
+  /*border: 1px solid black;*/
+  /*text-align: center;*/
+  /*vertical-align: middle;*/
+}
+
+.user-add {
+  position: relative;
+  top: 10px;
+  font-family: 'Raleway', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .5px;
+  color: #7d7d7d;
+  text-transform: uppercase;
+}
+
+.user-add:hover {
+  color: black;
+}
+
 
 
 /************************
