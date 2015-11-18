@@ -1,8 +1,9 @@
 <section id="featured-photo-container" style="background-image:url('<%= @recipe.photo_url %>');background-position: cover;"></section>
 
 <div class="main-container">
-
   <section id="recipe-content-container">
+
+    <!-- Details of Recipe -->
     <div id="recipe-content">
       <h3 id="recipe-title"><%= @recipe.title %></h2>
       <p id="recipe-description"><%= @recipe.description %></p>
@@ -10,8 +11,14 @@
       <p id="recipe-ingredients"><%= @recipe.ingredients %></p>
       <p class="recipe-show-subhead">Directions</p>
       <p id="recipe-directions"><%= @recipe.directions %></p>
-      <p class="edit"><%= link_to "Edit Recipe", edit_recipe_path(@recipe) %></p>
+
+      <!-- Edit Recipe -->
+      <% if current_user == @recipe.user %>
+        <p class="edit"><%= link_to "Edit Recipe", edit_recipe_path(@recipe) %></p>
+      <% end %>
     </div>
+
+    <!-- User Sidebar -->
     <div class="user-sidebar-container">
       <%= link_to user_path(@recipe.user_id) do %>
         <%= image_tag @recipe.user.photo_url, id: 'user-sidebar-photo' %>
@@ -21,6 +28,6 @@
       <p class="user-sidebar-subhead">Culinary<br>Contributions:</p>
       <p id="user-sidebar-contributions"><%= @recipe.user.recipes.length %></p>
     </div>
+    
   </section>
-
 </div>
