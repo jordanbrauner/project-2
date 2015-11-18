@@ -50,7 +50,9 @@
           <%= image_tag 'instagram.png', class: "social-media-icon" %>
           <%= image_tag 'youtube.png', class: "social-media-icon" %>
         </div>
-        <%= link_to 'the food life', recipes_path, id: 'logo', class: 'footer-text' %>
+        <%= link_to 'the food life', recipes_path, id: 'footer-logo', class: 'footer-text' %>
+        <%= link_to 'My Profile', user_path(@user), id: 'login-options', class: 'footer-text' %>
+        <%= link_to 'My Boxes', boxes_path(@user), id: 'login-options', class: 'footer-text' %>
         <section id="login-container">
         <% if current_user %>
           <%= link_to 'Signout', destroy_user_session_path, :method => :delete, id: 'login-options', class: 'footer-text' %>
@@ -59,6 +61,7 @@
           <%= link_to 'Signup', new_user_registration_path, id: 'login-options', class: 'footer-text' %>
         <% end %>
         </section>
+        <p class="copyright">&copy; 2015 Jordan Brauner</p>
       </section>
     </footer>
   </body>

@@ -21,36 +21,35 @@
   </section>
 
   <!-- My Boxes -->
-  <div class="main-container">
-    <section id="the-latest-container">
-      <h3 id="the-latest-subhead">My Boxes</h3>
-      <div id="boxes-container">
-        <% @user.boxes.each do |box| %>
-          <div class="boxes">
-            <%= link_to box do %>
-              <%# image_tag box.recipes.first.photo_url, class: "small-recipe-thumbnail" %>
-            <% end %>
-            <p class="box-title"><%= link_to box.title, box_path(box) %></p>
-          </div>
-        <% end %>
-      </div>
-    </section>
 
-    <!-- All Boxes -->
-    <section id="the-latest-container">
-      <h3 id="the-latest-subhead">All Boxes</h3>
-      <div id="boxes-container">
-        <% @boxes.each do |box| %>
-          <div class="boxes">
-            <%= link_to box do %>
-              <%# image_tag box.recipes.first.photo_url, class: "small-recipe-thumbnail" %>
-            <% end %>
-            <p class="box-title"><%= link_to box.title, box_path(box) %></p>
-          </div>
-        <% end %>
-      </div>
-    </section>
-  </div>
+  <section id="the-latest-container">
+    <h3 id="the-latest-subhead">My Boxes</h3>
+    <div id="boxes-container">
+      <% @user.boxes.each do |box| %>
+        <div class="boxes">
+          <%= link_to box do %>
+            <%# image_tag box.recipes.first.photo_url, class: "small-recipe-thumbnail" %>
+          <% end %>
+          <p class="box-title"><%= link_to box.title, box_path(box) %></p>
+        </div>
+      <% end %>
+    </div>
+  </section>
+
+  <!-- All Boxes -->
+  <section id="the-latest-container">
+    <h3 id="the-latest-subhead">All Boxes</h3>
+    <div id="boxes-container">
+      <% @boxes.each do |box| %>
+        <div class="boxes">
+          <%= link_to box do %>
+            <%# image_tag box.recipes.first.photo_url, class: "small-recipe-thumbnail" %>
+          <% end %>
+          <p class="box-title"><%= link_to box.title, box_path(box) %></p>
+        </div>
+      <% end %>
+    </div>
+  </section>
 
   <%# link_to "New Box", new_user_box_path(@user) %>
 </div>

@@ -701,7 +701,7 @@ footer {
   margin-top: 80px;
   background-color: black;
   /*background-color: #3c3c3c;*/
-  height: 230px;
+  height: 300px;
   width: 100%
 }
 
@@ -721,7 +721,7 @@ footer {
 }
 
 #login-options {
-  margin-top: 40px;
+  margin-top: 10px;
   margin-right: 20px;
   display: block;
   font-family: 'Raleway', sans-serif;
@@ -735,6 +735,18 @@ footer {
   float: right;
 }
 
+#footer-logo {
+  /*float: left;*/
+  font-family: 'Vollkorn', serif;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: -.5px;
+}
+
+#footer-logo:hover {
+  color: red;
+}
+
 .social-media-icon {
   display: inline-block;
   height: 22px;
@@ -744,4 +756,18 @@ footer {
 
 .social-media-icon:hover {
   opacity: .5;
+}
+
+.copyright {
+  float: right;
+  display: inline-block;
+  text-align: right;
+  margin-top: -14px;
+  margin-right: 8px;
+  line-height: 16px;
+  font-family: 'Raleway', sans-serif;
+  font-size: 9px;
+  color: white;
+  font-weight: 300;
+  letter-spacing: .75px;
 }
