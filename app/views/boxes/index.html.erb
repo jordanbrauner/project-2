@@ -1,0 +1,48 @@
+<section id="featured-photo-container" style="background-image:url('<%= @recipes.last.photo_url %>');background-position: cover;"></section>
+<section id="featured-user-recipe-container">
+  <div id="featured-user-recipe-wrapper">
+    <span id="featured-user-recipe">Featured Recipe</span>
+    <span id="name-of-featured-user-recipe">|</span>
+    <span id="name-of-featured-user-recipe"><%= @recipes.last.title %></span>
+  </div>
+</section>
+
+<div class="main-container">
+
+
+  <!-- My Boxes -->
+  <div class="main-container">
+    <section id="the-latest-container">
+      <h3 id="the-latest-subhead">My Boxes</h3>
+      <div id="the-latest-recipes-container">
+        <% @user.boxes.each do |box| %>
+          <div class="the-latest-recipes">
+            <%= link_to box do %>
+              <%# image_tag box.recipes.first.photo_url, class: "small-recipe-thumbnail" %>
+            <% end %>
+            <p class="small-recipe-title"><%= link_to box.title, box_path(box) %></p>
+          </div>
+        <% end %>
+      </div>
+    </section>
+  </div>
+
+  <!-- All Boxes -->
+  <div class="main-container">
+    <section id="the-latest-container">
+      <h3 id="the-latest-subhead">All Boxes</h3>
+      <div id="the-latest-recipes-container">
+        <% @boxes.each do |box| %>
+          <div class="the-latest-recipes">
+            <%= link_to box do %>
+              <%# image_tag box.recipes.first.photo_url, class: "small-recipe-thumbnail" %>
+            <% end %>
+            <p class="small-recipe-title"><%= link_to box.title, box_path(box) %></p>
+          </div>
+        <% end %>
+      </div>
+    </section>
+  </div>
+
+  <%= link_to "New Box", new_user_box_path(@user) %>
+</div>

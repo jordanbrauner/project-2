@@ -5,6 +5,7 @@ class UsersController < ApplicationController
 
   def show
     @contributor = User.find(params[:id])
+    @latest = @contributor.recipes.last
   end
 
   def set_post

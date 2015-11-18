@@ -1,10 +1,10 @@
 <!-- User's most recent contribution as a featured photo -->
-<section id="featured-photo-container" style="background-image:url('<%= @contributor.recipes.last.photo_url %>');background-position: cover;"></section>
+<a href="<%= recipe_path(@latest) %>"><section id="featured-photo-container" style="background-image:url('<%= @contributor.recipes.last.photo_url %>');background-position: cover;"></section></a>
 <section id="featured-user-recipe-container">
   <div id="featured-user-recipe-wrapper">
-    <span id="featured-user-recipe">Latest Recipe</span>
+    <a href="<%= recipe_path(@latest) %>"><span id="featured-user-recipe">Latest Recipe</span></a>
     <span id="name-of-featured-user-recipe">|</span>
-    <span id="name-of-featured-user-recipe"><%= @contributor.recipes.last.title %></span>
+    <a href="<%= recipe_path(@latest) %>"><span id="name-of-featured-user-recipe"><%= @contributor.recipes.last.title %></span></a>
   </div>
 </section>
 
