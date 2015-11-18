@@ -362,6 +362,38 @@ RECIPE#SHOW
 USER PROFILE
 ************************/
 
+#featured-user-recipe-container {
+  height: 45px;
+  background-color: black;
+}
+
+#featured-user-recipe-wrapper {
+  margin: 0 auto;
+  max-width: 820px;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-top: 12px;
+}
+
+#featured-user-recipe {
+  font-family: 'Vollkorn', serif;
+  font-style: italic;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: white;
+}
+
+#name-of-featured-user-recipe {
+  margin-left: 20px;
+  font-family: 'Raleway', sans-serif;
+  font-size: 12px;
+  color: white;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: .75px;
+}
+
 #user-profile-container {
   display: inline-block;
   min-width: 200px;

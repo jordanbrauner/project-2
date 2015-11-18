@@ -5,6 +5,7 @@ class RecipesController < ApplicationController
 
   def index
     @recipes = Recipe.all
+    @recipe = Recipe.last
   end
 
   def show
