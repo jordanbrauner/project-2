@@ -2,24 +2,24 @@
 <div class="main-container">
   <section id="user-profile-container">
     <div id="user-profile-container">
-      <h3 id="user-profile-name"><%= @user.username %></h2>
+      <h3 id="user-profile-name"><%= @contributor.username %></h2>
       <p id="user-bio">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
     </div>
   </section>
   <section class="user-sidebar-container">
-    <%= image_tag @user.photo_url, id: 'user-sidebar-photo' %>
+    <%= image_tag @contributor.photo_url, id: 'user-sidebar-photo' %>
     <p class="user-sidebar-subhead">Culinary</br>Contributions:</p>
-    <p id="user-sidebar-contributions"><%= @user.recipes.length %></p>
+    <p id="user-sidebar-contributions"><%= @contributor.recipes.length %></p>
   </section>
   <section id="user-column-container">
     <div class="profile-column">
       <p class="user-profile-column-subhead">Recipes</p>
-      <% @user.recipes.each do |recipe| %>
-        <p class="column-list"><%= recipe.title %></p>
+      <% @contributor.recipes.each do |recipe| %>
+        <p class="column-list"><%= link_to recipe.title, recipe_path(recipe) %></p>
       <% end %>
     </div>
     <div class="profile-column">
-      <p class="user-profile-column-subhead">Boards</p>
+      <p class="user-profile-column-subhead">Boxes</p>
       <ul class="column-list">
         <li class="column-list">Country Breakfast</li>
         <li class="column-list">Thanksgiving</li>

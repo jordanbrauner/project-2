@@ -13,10 +13,12 @@
       <p class="edit"><%= link_to "Edit Recipe", edit_recipe_path(@recipe) %></p>
     </div>
     <div class="user-sidebar-container">
-      <%= image_tag @recipe.user.photo_url, id: 'user-sidebar-photo' %>
+      <%= link_to user_path(@recipe.user_id) do %>
+        <%= image_tag @recipe.user.photo_url, id: 'user-sidebar-photo' %>
+      <% end %>
       <p class="user-sidebar-subhead">Chef</p>
       <p id="user-sidebar-name"><%= @recipe.user.username %></p>
-      <p class="user-sidebar-subhead">Contributions:</p>
+      <p class="user-sidebar-subhead">Culinary<br>Contributions:</p>
       <p id="user-sidebar-contributions"><%= @recipe.user.recipes.length %></p>
     </div>
   </section>
