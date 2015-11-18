@@ -162,6 +162,7 @@ MAIN - FEATURED PHOTO
 .main-container {
   margin: 0 auto;
   max-width: 820px;
+  min-height: 300px;
   margin-top: 70px;
   padding-left: 40px;
   padding-right: 40px;
@@ -556,7 +557,7 @@ USER SIDEBAR
 }
 
 #user-sidebar-contributions {
-  margin-top: -5px;
+  margin-top: -10px;
   font-family: 'Raleway', sans-serif;
   font-size: 50px;
   text-transform: uppercase;
@@ -687,7 +688,7 @@ footer {
   margin-top: 150px;
   background-color: black;
   /*background-color: #3c3c3c;*/
-  height: 350px;
+  height: 230px;
   width: 100%
 }
 
