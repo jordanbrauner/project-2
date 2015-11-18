@@ -533,6 +533,12 @@ USER SIDEBAR
   border-radius: 360px;
   height: 150px;
   width: 150px;
+  /*border: 10px solid white;*/
+  box-shadow: 0px 3px 10px #a7a7a7;
+}
+
+#user-sidebar-photo:hover {
+  opacity: .9;
 }
 
 #user-sidebar-name {
