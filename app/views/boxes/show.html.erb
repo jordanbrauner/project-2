@@ -18,8 +18,18 @@
 
     <!-- Edit Box -->
     <% if current_user == @box.user %>
-      <p class="edit">Edit Box</p>
+      <%= link_to "Edit Box", edit_box_path(@box), class: "edit" %>
     <% end %>
+
+    <!-- All Recipes to add to box -->
+    <section id="the-latest-container">
+      <h3 id="the-latest-subhead">Latest Recipes</h3>
+      <% @recipes.each do |recipe| %>
+        <div class="boxes">
+          <p class="box-title"><%= link_to recipe.title, recipe_path(recipe) %></p>
+      <% end %>
+      </div>
+    </section>
   </div>
 
   <!-- User Sidebar -->

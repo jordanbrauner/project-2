@@ -25,6 +25,21 @@ class BoxesController < ApplicationController
     end
   end
 
+  def edit
+    @box = Box.find(params[:id])
+    @recipes = Recipe.all
+  end
+
+  def update
+    @box = Box.find(params[:id])
+    if @box.update!(box_params)
+      flash[:notice] = "#{@box.title} was updated."
+      redirect_to @box
+    else
+      render :edit
+    end
+  end
+
   def set_post
     @boxes = Box.all
     @recipes = Recipe.all
