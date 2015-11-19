@@ -5,11 +5,12 @@ class UsersController < ApplicationController
 
   def show
     @contributor = User.find(params[:id])
-    @latest = @contributor.recipes.last
+    @contributor_latest = @contributor.recipes.last
   end
 
   def set_post
     @user = current_user
+    @recipes = Recipe.all
   end
 
   private

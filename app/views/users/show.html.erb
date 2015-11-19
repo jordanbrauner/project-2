@@ -1,10 +1,47 @@
 <!-- User's most recent contribution as a featured photo -->
-<a href="<%= recipe_path(@latest) %>"><section id="featured-photo-container" style="background-image:url('<%= @contributor.recipes.last.photo_url %>');background-position: cover;"></section></a>
+
+<!-- Conditional that sets the background image correctly whether the user has 0 or more contributions -->
+<a href="
+    <% if @contributor.recipes.length < 1 %>
+      <%= @recipes.last %>
+    <% else %>
+      <%= recipe_path(@contributor.recipes.last) %>
+    <% end %>
+  ">
+  <section id="featured-photo-container" style="background-image:url('<% if @contributor.recipes.length < 1 %><%= @recipes.last.photo_url %><% else %><%= @contributor_latest.photo_url %><% end %>'); background-position: cover;">
+  </section>
+</a>
+
 <section id="featured-user-recipe-container">
   <div id="featured-user-recipe-wrapper">
-    <a href="<%= recipe_path(@latest) %>"><span id="featured-user-recipe"><%= @contributor.username %>'s Latest Recipe</span></a>
+
+    <!-- Conditional that sets the name of the recipe whether the user has 0 or more contributions  -->
+    <a href="
+      <% if @contributor.recipes.length < 1 %>
+        <%= recipe_path(@recipes.last) %>
+      <% else %>
+        <%= recipe_path(@contributor_latest) %>
+      <% end %>
+    "><span id="featured-user-recipe">
+      <% if @contributor.recipes.length > 0 %>
+        <%= @contributor.username + "\'s " %>
+      <% end %>
+    Latest Recipe</span></a>
+
     <span id="name-of-featured-user-recipe">|</span>
-    <a href="<%= recipe_path(@latest) %>"><span id="name-of-featured-user-recipe"><%= @contributor.recipes.last.title %></span></a>
+    <a href="
+      <% if @contributor.recipes.length < 1 %>
+        <%= recipe_path(@recipes.last) %>
+      <% else %>
+        <%= recipe_path(@contributor_latest) %>
+      <% end %>
+    "><span id="name-of-featured-user-recipe">
+      <% if @contributor.recipes.length < 1 %>
+        <%= @recipes.last.title %>
+      <% else %>
+        <%= @contributor_latest.title %>
+      <% end %>
+    </span></a>
   </div>
 </section>
 

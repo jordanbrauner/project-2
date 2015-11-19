@@ -35,6 +35,8 @@
             <%= image_tag current_user.photo_url, id: 'profile-nav-photo' %>
           <% end %>
         <% else %>
+          <%= link_to 'Signup', new_user_registration_path, class: 'nav-options' %>
+          <h1 class="nav-options-bar">|</h1>
           <%= link_to 'Login', new_user_session_path, class: 'nav-options' %>
         <% end %>
       </div>
