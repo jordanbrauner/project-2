@@ -325,7 +325,7 @@ RECIPE#SHOW
   margin-top: 10px;
   height: 30px;
   width: 30px;
-  background-image: url('fav-off.png');
+  background-image: url('http://i.imgur.com/RWdnw5a.png');
   background-size: 13px 13px;
   background-repeat: no-repeat;
   background-position: center;
@@ -335,7 +335,7 @@ RECIPE#SHOW
 }
 
 #favorite:hover {
-  background-image: url('fav-on.png');
+  background-image: url('http://i.imgur.com/PEtNToc.png');
 }
 
 #recipe-content-container {
