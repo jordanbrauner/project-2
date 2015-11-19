@@ -32,11 +32,14 @@
       <div class="sidebar-rule"></div>
 
       <!-- Add this recipe to my box -->
+      <p class="user-sidebar-subhead" id="black">Dig this recipe?</p>
       <div id="add-to-my-box-container">
         <p class="user-sidebar-subhead">Box it</p>
         <% @user.boxes.each do |box| %>
           <p class="user-sidebar-box-list"><%= box.title %></p>
         <% end %>
+        <p class="user-sidebar-subhead">Fav it</p>
+        <div id="favorite"></div>
 
       </div>
     </div>

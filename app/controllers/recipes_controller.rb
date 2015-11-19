@@ -49,6 +49,12 @@ class RecipesController < ApplicationController
     end
   end
 
+  def add_to_box
+    @recipe = Recipe.find(params[:id])
+    @box.recipes.create()
+    redirect_to boxes_path
+  end
+
   def set_post
     @user = current_user
   end

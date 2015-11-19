@@ -319,6 +319,24 @@ MAIN - THE LATEST
 RECIPE#SHOW
 ************************/
 
+#favorite {
+  margin: 0 auto;
+  margin-top: 10px;
+  height: 30px;
+  width: 30px;
+  background-image: url('fav-off.png');
+  background-size: 13px 13px;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 360px;
+  border: 1px solid #aeaeae;
+
+}
+
+#favorite:hover {
+  background-image: url('fav-on.png');
+}
+
 #recipe-content-container {
   margin-top: 40px;
 }
@@ -578,11 +596,11 @@ USER SIDEBAR
 }
 
 .sidebar-rule {
-    margin: 0 auto;
-    margin-top: 30px;
-    margin-bottom: 30px;
-    width: 65px;
-    border-top: 8px solid black;
+  margin: 0 auto;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  width: 65px;
+  border-top: 8px solid black;
 }
 
 .user-sidebar-box-list {
@@ -594,6 +612,9 @@ USER SIDEBAR
   letter-spacing: .5px;
 }
 
+#black {
+  color: black;
+}
 
 /************************
 NEW RECIPE
