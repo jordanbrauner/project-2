@@ -40,6 +40,14 @@ class BoxesController < ApplicationController
     end
   end
 
+  def destroy
+    @box = Recipe.find(params[:id])
+    if @box.user_id == @box.id
+      @box.destroy
+      redirect_to boxes_path
+    end
+  end
+
   def set_post
     @boxes = Box.all
     @recipes = Recipe.all
