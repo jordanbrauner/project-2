@@ -340,6 +340,7 @@ RECIPE#SHOW
 
 #recipe-content-container {
   margin-top: 40px;
+  min-height: 600px;
 }
 
 #recipe-content {
