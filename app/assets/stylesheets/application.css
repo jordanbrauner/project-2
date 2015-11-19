@@ -262,9 +262,9 @@ MAIN - THE LATEST
 .small-recipe-title {
   margin-top: 5px;
   font-family: 'Raleway', sans-serif;
-  font-size: 15px;
+  font-size: 13px;
   font-weight: 700;
-  letter-spacing: .75px;
+  letter-spacing: .4px;
 }
 
 .small-recipe-description {
@@ -698,7 +698,7 @@ FOOTER
 ************************/
 
 footer {
-  margin-top: 80px;
+  margin-top: 100px;
   background-color: black;
   /*background-color: #3c3c3c;*/
   height: 300px;
