@@ -228,7 +228,6 @@ MAIN - THE LATEST
 
 #the-latest-container {
   margin-top: 80px;
-  margin-bottom: 70px;
 }
 
 #the-latest-recipes-container {
@@ -354,6 +353,7 @@ RECIPE#SHOW
   text-transform: uppercase;
   font-weight: 700;
   margin-bottom: 9px;
+  margin-top: 0;
 }
 
 #recipe-description {
@@ -362,7 +362,7 @@ RECIPE#SHOW
   font-weight: 300;
   line-height: 20px;
   margin-bottom: 20px;
-  border-top: 1px solid #939393;
+  border-top: 1px solid #e1e1e1;
   padding-top: 24px;
 }
 
@@ -556,6 +556,8 @@ USER SIDEBAR
   float: right;
   width: 200px;
   text-align: center;
+  padding-left: 30px;
+  border-left: 1px solid #e1e1e1;
 }
 
 .user-sidebar-subhead {
@@ -590,7 +592,7 @@ USER SIDEBAR
 }
 
 #user-sidebar-contributions {
-  margin-top: -10px;
+  margin-top: -5px;
   font-family: 'Raleway', sans-serif;
   font-size: 50px;
   text-transform: uppercase;
@@ -721,7 +723,7 @@ FOOTER
 ************************/
 
 footer {
-  margin-top: 100px;
+  margin-top: 40px;
   background-color: black;
   /*background-color: #3c3c3c;*/
   height: 300px;
