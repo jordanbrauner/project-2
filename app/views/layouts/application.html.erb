@@ -17,8 +17,10 @@
       <div id="nav-options-container">
         <%= link_to 'Recipes', recipes_path, class: 'nav-options' %>
         <h1 class="nav-options-bar">|</h1>
-        <a href="<%= boxes_path %>"><h1 class="nav-options">Boxes</h1></a>
-        <h1 class="nav-options-bar">|</h1>
+        <% if current_user %>
+          <a href="<%= boxes_path %>"><h1 class="nav-options">Boxes</h1></a>
+          <h1 class="nav-options-bar">|</h1>
+        <% end %>
         <% if current_user %>
           <div class="menu-wrap">
             <div class="menu">

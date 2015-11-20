@@ -77,9 +77,11 @@
         <% end %>
       </div>
       <!-- Add a Recipe -->
-      <div class="user-add-container">
-        <%= link_to "New Recipe", new_recipe_path, class: 'user-add' %>
-      </div>
+      <% if current_user == @contributor %>
+        <div class="user-add-container">
+          <%= link_to "New Recipe", new_recipe_path, class: 'user-add' %>
+        </div>
+      <% end %>
     </div>
 
     <!-- User Boxes -->
@@ -91,9 +93,11 @@
         <% end %>
       </div>
       <!-- Add a Recipe Box -->
-      <div class="user-add-container">
-        <%= link_to "New Box", new_user_box_path(@user), class: 'user-add' %>
-      </div>
+      <% if current_user == @contributor %>
+          <div class="user-add-container">
+            <%= link_to "New Box", new_user_box_path(@user), class: 'user-add' %>
+          </div>
+      <% end %>
     </div>
 
     <!-- User Favorites -->
@@ -109,10 +113,14 @@
         <p>Canadian Burrata</p>
       </div>
       <!-- Browse Recipes -->
-      <div class="user-add-container">
-        <%= link_to "Browse", recipes_path, class: 'user-add' %>
-      </div>
+      <% if current_user == @contributor %>
+        <div class="user-add-container">
+          <%= link_to "Browse", recipes_path, class: 'user-add' %>
+        </div>
+      <% end %>
     </div>
   </section>
-  <p class="edit"><%= link_to "Edit Profile", user_path(@user) %></p>
+  <% if current_user == @contributor %>
+    <p class="edit"><%= link_to "Edit Profile", user_path(@user) %></p>
+  <% end %>
 </div>
