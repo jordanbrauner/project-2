@@ -18,6 +18,7 @@ class RecipesController < ApplicationController
 
   def create
     @recipe = @user.recipes.new(recipe_params)
+    # AM: Reminder to remove commented-out code from your master branch when submitting projects. Either remove or keep it in a separate branch.
     # @recipe = Recipe.new(recipe_params)
     if @recipe.save
       flash[:notice] = "#{@recipe.title} was created."

@@ -1,5 +1,6 @@
 class BoxesController < ApplicationController
 
+  # AM: +1 keeping your code DRY with `before_action`.
   before_action :set_post, only: [:index, :show, :new, :create, :edit, :update, :destroy]
   before_action :authenticate_user!, only: [:new, :create, :edit, :update, :destroy]
 
@@ -48,6 +49,7 @@ class BoxesController < ApplicationController
     end
   end
 
+  # AM: Are you calling this `set_post` for a reason? You can change the name to reflect your models.
   def set_post
     @boxes = Box.all
     @recipes = Recipe.all
