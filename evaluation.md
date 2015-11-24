@@ -20,7 +20,7 @@
 
 Great job here. It was very easy to look through your code, and the comments in your views made it clear which chunk of code did what. Encourage you think about how you could separate some of your longer views into partials. Will go a long way in making your code more readable. Also, don't forget to take a look at my inline code comments via the link below.
 
-[Inline code comments.]()
+[Inline code comments.](https://github.com/jordanbrauner/project-2/pull/1/files)
 
 ## Problem Solving
 
