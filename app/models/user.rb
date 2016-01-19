@@ -5,5 +5,6 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
   has_many :boxes
   has_many :recipes
-
+  has many :recipes, through: :favorites
+  has_many :favorites
 end
