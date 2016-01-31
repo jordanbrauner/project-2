@@ -16,6 +16,7 @@ ActiveRecord::Schema.define(version: 20151119143122) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+  # AM: You will want to implement a many-to-many relationship between boxes and recipes. That's the only way a box can have many recipes AND a recipe can appear in many boxes.
   create_table "boxes", force: :cascade do |t|
     t.string  "title"
     t.integer "user_id"
@@ -32,6 +33,7 @@ ActiveRecord::Schema.define(version: 20151119143122) do
     t.string  "ingredients"
     t.string  "directions"
     t.integer "user_id"
+    t.integer "box_id"
   end
 
   add_index "recipes", ["user_id"], name: "index_recipes_on_user_id", using: :btree

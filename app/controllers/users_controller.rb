@@ -8,6 +8,8 @@ class UsersController < ApplicationController
     @contributor_latest = @contributor.recipes.last
   end
 
+  # AM: Looks like you end up using `set_post` in a number of controllers. What about making this into a application-wide helper method so that you don't have to keep defining it in each controller.
+  # AM: `application_controller` would be a good place for it. 
   def set_post
     @user = current_user
     @recipes = Recipe.all

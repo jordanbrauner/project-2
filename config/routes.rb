@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   devise_for :users, :controllers => { registrations: 'registrations' }
   root to: 'recipes#index'
   resources :recipes
+  # AM: You don't need to say `resources :users` here because you say it in the `do` block below. That block takes care of bouth the user URLs and the nested box URLs.
   resources :users
   resources :boxes
   resources :users do
