@@ -155,3 +155,23 @@ MAIN - THE LATEST
   background-color: red;
   color: black;
 }
+
+#new-box {
+  height: 40px;
+  width: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: black;
+  font-family: 'Raleway', sans-serif;
+  font-size: 10px;
+  font-weight: 400;
+  letter-spacing: .5px;
+  color: white;
+  text-transform: uppercase;
+}
+
+#new-box:hover {
+  background-color: red;
+}

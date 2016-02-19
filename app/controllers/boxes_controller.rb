@@ -42,8 +42,16 @@ class BoxesController < ApplicationController
 
   def destroy
     @box = Box.find(params[:id])
-    if @box.user_id == @box.id
-      @box.destroy
+    if @box.user_id == @user.id
+      if @box.destroy
+        flash[:notice] = "Box deleted."
+        redirect_to boxes_path
+      else
+        flash[:notice] = "There was an error. Box not deleted."
+        redirect_to boxes_path
+      end
+    else
+      flash[:notice] = "This is not your box."
       redirect_to boxes_path
     end
   end
