@@ -1,0 +1,157 @@
+/************************
+MAIN - FEATURED PHOTO
+************************/
+
+.main-container {
+  margin: 0 auto;
+  max-width: 820px;
+  min-height: 280px;
+  margin-top: 70px;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-bottom: 50px;
+}
+
+#featured-photo-container {
+  margin-top: 15px;
+  height: 500px;
+  background-size: cover;
+  background-image: url("http://i.imgur.com/paZDzuF.jpg");
+  background-position: center
+}
+
+#featured-photo-container:hover {
+  opacity: .92;
+}
+
+
+/************************
+MAIN - QUOTE
+************************/
+
+#quote-container {
+  min-height: 180px;
+  background-color: #efeff0;
+}
+
+#quote-wrapper {
+  margin: 0 auto;
+  padding-top: 50px;
+  max-width: 570px;
+  padding-left: 70px;
+  padding-right: 70px;
+}
+
+#quote {
+  text-align: center;
+  font-family: 'Vollkorn', serif;
+  font-weight: 700;
+  font-style: italic;
+  font-size: 22px;
+  letter-spacing: .7px;
+}
+
+#quote-byline {
+  margin-top: 20px;
+  margin-left: 10px;
+  text-align: center;
+  font-family: 'Raleway', sans-serif;
+  font-size: 11px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+
+
+/************************
+MAIN - THE LATEST
+************************/
+
+#the-latest-container {
+  margin-top: 80px;
+}
+
+#the-latest-recipes-container {
+  margin-bottom: 40px;
+}
+
+#the-latest-subhead {
+  font-family: 'Vollkorn', serif;
+  font-style: italic;
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.the-latest-recipes {
+  vertical-align: top;
+  display: inline-block;
+  width: 230px;
+  margin-bottom: 30px;
+  margin-right: 2%;
+  /*margin: 0 17px 40px 0;*/
+}
+
+.small-recipe-thumbnail {
+  width: 230px;
+  height: 155px;
+}
+
+.small-recipe-thumbnail:hover {
+  opacity: .6;
+}
+
+.small-recipe-title {
+  margin-top: 5px;
+  font-family: 'Raleway', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: .4px;
+}
+
+.small-recipe-description {
+  max-height: 40px;
+  margin-top: 5px;
+  font-family: 'Raleway', sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: .75px;
+  line-height: 15px;
+}
+
+#add-recipe-rule {
+    margin-top: 50px;
+    width: 100%;
+    /*border-bottom: 1px solid black;*/
+}
+
+#add-recipe-container {
+  /*position: relative;*/
+  /*top: -60px;*/
+  /*left: -40px;*/
+  height: 40px;
+  width: 100px;
+  /*margin: 20px;*/
+  margin-top: -30px;
+  background-color: black;
+  text-align: center;
+  vertical-align: middle;
+  /*border: 20px solid white;*/
+}
+
+#add-recipe {
+  position: relative;
+  top: 9px;
+  font-family: 'Raleway', sans-serif;
+  font-size: 10px;
+  font-weight: 400;
+  letter-spacing: .5px;
+  color: white;
+  text-transform: uppercase;
+}
+
+#add-recipe-container:hover {
+  background-color: red;
+  color: black;
+}

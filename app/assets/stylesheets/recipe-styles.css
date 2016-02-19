@@ -1,0 +1,83 @@
+/************************
+RECIPE#SHOW
+************************/
+
+#favorite {
+  margin: 0 auto;
+  margin-top: 10px;
+  height: 30px;
+  width: 30px;
+  background-image: url('http://i.imgur.com/RWdnw5a.png');
+  background-size: 13px 13px;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 360px;
+  border: 1px solid #aeaeae;
+
+}
+
+#favorite:hover {
+  background-image: url('http://i.imgur.com/PEtNToc.png');
+}
+
+#recipe-content-container {
+  margin-top: 40px;
+  min-height: 600px;
+}
+
+#recipe-content {
+  display: inline-block;
+  width: 60%;
+}
+
+#recipe-title {
+  font-family: 'Raleway', sans-serif;
+  font-size: 35px;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-bottom: 9px;
+  margin-top: 0;
+}
+
+#recipe-description {
+  font-family: 'Raleway', sans-serif;
+  font-size: 13px;
+  font-weight: 300;
+  line-height: 20px;
+  margin-bottom: 20px;
+  border-top: 1px solid #e1e1e1;
+  padding-top: 24px;
+}
+
+.recipe-show-subhead {
+  font-family: 'Vollkorn', serif;
+  font-style: italic;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: .5px;
+  margin-bottom: 3px;
+}
+
+#recipe-ingredients {
+  font-family: 'Raleway', sans-serif;
+  font-size: 13px;
+  font-weight: 300;
+  line-height: 20px;
+  margin-bottom: 20px;
+}
+
+#recipe-directions {
+  font-family: 'Raleway', sans-serif;
+  font-size: 13px;
+  font-weight: 300;
+  line-height: 20px;
+  margin-bottom: 20px;
+}
+
+.edit {
+  font-family: 'Raleway', sans-serif;
+  font-size: 12px;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-top: 30px;
+}
