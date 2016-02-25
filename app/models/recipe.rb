@@ -1,6 +1,19 @@
 class Recipe < ActiveRecord::Base
   belongs_to :user
   belongs_to :boxes
-  has_many :favorites
-  has_many :users, through: :favorites
+  # has_many :favorites
+  # has_many :users, through: :favorites
 end
+
+
+
+# class Recipe < ActiveRecord::Base
+#
+#   belongs_to :user
+#   has_many :boxes
+#   has_many :users, through: :boxes
+#
+#   # belongs_to :boxes
+#   # has_many :favorites
+#   # has_many :users, through: :favorites
+# end

@@ -49,6 +49,10 @@ class RecipesController < ApplicationController
     end
   end
 
+  def add_to_fav
+
+  end
+
   def add_to_box
     @recipe = Recipe.find(params[:id])
     @box.recipes.create()

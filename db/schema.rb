@@ -40,6 +40,7 @@ ActiveRecord::Schema.define(version: 20151120211157) do
     t.string  "ingredients"
     t.string  "directions"
     t.integer "user_id"
+    t.integer "box_id"
   end
 
   add_index "recipes", ["user_id"], name: "index_recipes_on_user_id", using: :btree

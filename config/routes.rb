@@ -1,6 +1,12 @@
 Rails.application.routes.draw do
+
+  # Devise
   devise_for :users, :controllers => { registrations: 'registrations' }
+
+  # Root
   root to: 'recipes#index'
+
+  # Routes
   resources :recipes
   resources :users
   resources :boxes
