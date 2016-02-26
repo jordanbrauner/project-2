@@ -1,6 +1,6 @@
 class Box < ActiveRecord::Base
   belongs_to :user
-  has_many :recipes
+  has_and_belongs_to_many :recipes
 end
 
 
