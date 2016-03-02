@@ -5,6 +5,13 @@
     <h2 class="subhead">Box it.</h2>
     <p id="new-description">Create a Recipe Box to store your favorite recipes by a common theme. Examples: <em>Just Desserts</em>, <em>Comfort Food</em>, <em>Work Week Dinners</em>, or <em>Modern Thanksgiving</em></p>
     <%= render 'form' %>
+
+    <div>
+      <% @box.recipes.each do |recipe| %>
+      <h2 class="subhead">Remove Recipes from <%= @box.title %></h2>
+      <p class="box-title"><%= link_to recipe.title, remove_from_box_recipe_box_path(recipe.id, @box), method: :delete %></p>
+      <% end %>
+    </div>
   </section>
 
   <%= link_to 'Delete Box', box_path(@box), method: :delete, class: 'edit' %>

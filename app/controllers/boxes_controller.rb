@@ -1,6 +1,6 @@
 class BoxesController < ApplicationController
 
-  before_action :set_post, only: [:index, :show, :new, :create, :edit, :update, :destroy]
+  before_action :vars, only: [:index, :show, :new, :create, :edit, :update, :destroy]
   before_action :authenticate_user!, only: [:new, :create, :edit, :update, :destroy]
 
   def index
@@ -57,7 +57,23 @@ class BoxesController < ApplicationController
     end
   end
 
-  def set_post
+  # BOX METHODS
+  def add_to_box
+    @recipe = Recipe.find(params[:recipe_id])
+    @box = Box.find(params[:id])
+    @box.recipes.push(@recipe)
+    redirect_to box_path(@box)
+  end
+
+  def remove_from_box
+    @recipe = Recipe.find(params[:recipe_id])
+    @box = Box.find(params[:id])
+    @box.recipes.destroy(@recipe)
+    redirect_to box_path(@box)
+  end
+
+  # SET COMMON VARIABLES
+  def vars
     @boxes = Box.all
     @recipes = Recipe.all
     @user = current_user

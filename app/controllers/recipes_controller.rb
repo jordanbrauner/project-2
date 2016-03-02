@@ -1,6 +1,6 @@
 class RecipesController < ApplicationController
 
-  before_action :set_post, only: [:index, :show, :new, :create, :edit, :update, :destroy]
+  before_action :rec_vars, only: [:index, :show, :new, :create, :edit, :update, :destroy]
   before_action :authenticate_user!, only: [:new, :create, :edit, :update, :destroy]
 
   def index
@@ -53,17 +53,7 @@ class RecipesController < ApplicationController
 
   end
 
-  def add_to_box
-    @recipe = Recipe.find(params[:id])
-    # @box.recipes.create()
-    redirect_to boxes_path
-  end
-
-  def remove_from_box
-
-  end
-
-  def set_post
+  def rec_vars
     @user = current_user
   end
 

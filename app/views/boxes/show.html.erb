@@ -16,7 +16,7 @@
     <h3 id="recipe-title"><%= @box.title %></h2>
     <p id="recipe-description"></p>
     <% @box.recipes.each do |recipe| %>
-      <p><%= recipe.title %></p>
+      <p class="box-title"><%= link_to recipe.title, recipe_path(recipe) %></p>
     <% end %>
 
     <!-- Edit Box -->

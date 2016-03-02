@@ -15,9 +15,11 @@ Rails.application.routes.draw do
   end
 
   resources :recipes do
-    member do
-      post 'add_to_box'
-      delete 'remove_from_box'
+    resources :boxes do
+      member do
+        post 'add_to_box'
+        delete 'remove_from_box'
+      end
     end
   end
 

@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
 
-  before_action :set_post, only: [:index, :show, :edit, :update, :destroy]
+  before_action :user_vars, only: [:index, :show, :edit, :update, :destroy]
   before_action :authenticate_user!, only: [:new, :create, :edit, :update, :destroy]
 
   def show
@@ -8,7 +8,7 @@ class UsersController < ApplicationController
     @contributor_latest = @contributor.recipes.last
   end
 
-  def set_post
+  def user_vars
     @user = current_user
     @recipes = Recipe.all
   end

@@ -38,7 +38,7 @@
 
             <p class="user-sidebar-subhead">Box it</p>
               <% @user.boxes.each do |box| %>
-                <p class="user-sidebar-box-list"><%= link_to box.title, add_to_box_recipe_path(@recipe), method: :post %></p>
+                <p class="user-sidebar-box-list"><%= link_to box.title, add_to_box_recipe_box_path(@recipe, box.id), method: :post %></p>
 
                 <!-- <p class="user-sidebar-box-list"><%# box.title %></p> -->
 
