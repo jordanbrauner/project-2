@@ -55,8 +55,12 @@ class RecipesController < ApplicationController
 
   def add_to_box
     @recipe = Recipe.find(params[:id])
-    @box.recipes.create()
+    # @box.recipes.create()
     redirect_to boxes_path
+  end
+
+  def remove_from_box
+
   end
 
   def set_post

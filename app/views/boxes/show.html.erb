@@ -15,6 +15,9 @@
   <div id="recipe-content">
     <h3 id="recipe-title"><%= @box.title %></h2>
     <p id="recipe-description"></p>
+    <% @box.recipes.each do |recipe| %>
+      <p><%= recipe.title %></p>
+    <% end %>
 
     <!-- Edit Box -->
     <% if current_user == @box.user %>

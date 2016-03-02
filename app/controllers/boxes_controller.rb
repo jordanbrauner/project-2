@@ -28,6 +28,7 @@ class BoxesController < ApplicationController
   def edit
     @box = Box.find(params[:id])
     @recipes = Recipe.all
+    @recipe = Recipe.find(params[:id])
   end
 
   def update
