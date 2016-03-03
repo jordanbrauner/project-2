@@ -1,10 +1,9 @@
-<!-- Most Recent Recipe in the Box TODO -->
-<section id="featured-photo-container" style="background-image:url('<%= @recipes.last.photo_url %>');background-position: cover;"></section>
+<section id="featured-photo-container" style="background-image:url('<%= @box.recipes.last.photo_url %>');background-position: cover;"></section>
 <section id="featured-user-recipe-container">
   <div id="featured-user-recipe-wrapper">
-    <span id="featured-user-recipe">Featured Recipe</span>
+    <span id="featured-user-recipe">Latest Addition to <%= @box.title %></span>
     <span id="name-of-featured-user-recipe">|</span>
-    <span id="name-of-featured-user-recipe"><%= @recipes.last.title %></span>
+    <span id="name-of-featured-user-recipe"><%= @box.recipes.last.title %></span>
   </div>
 </section>
 
@@ -15,24 +14,19 @@
   <div id="recipe-content">
     <h3 id="recipe-title"><%= @box.title %></h2>
     <p id="recipe-description"></p>
+
+    <!-- Recipes in Box -->
     <% @box.recipes.each do |recipe| %>
       <p class="box-title"><%= link_to recipe.title, recipe_path(recipe) %></p>
     <% end %>
 
     <!-- Edit Box -->
     <% if current_user == @box.user %>
-      <%= link_to "Edit Box", edit_box_path(@box), class: "edit" %>
-    <% end %>
-
-    <!-- All Recipes to add to box -->
-    <section id="the-latest-container">
-      <h3 id="the-latest-subhead">Latest Recipes</h3>
-      <% @recipes.each do |recipe| %>
-        <div class="boxes">
-          <p class="box-title"><%= link_to recipe.title, recipe_path(recipe) %></p>
-      <% end %>
+      <div>
+        <br />
+        <%= link_to "Edit Box", edit_box_path(@box), class: "edit" %>
       </div>
-    </section>
+    <% end %>
   </div>
 
   <!-- User Sidebar -->

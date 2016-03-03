@@ -2,13 +2,15 @@
 
   <section id="new-recipe-container">
     <%= image_tag 'rice-pot.jpg', id: 'new-form-image' %>
-    <h2 class="subhead">Box it.</h2>
-    <p id="new-description">Create a Recipe Box to store your favorite recipes by a common theme. Examples: <em>Just Desserts</em>, <em>Comfort Food</em>, <em>Work Week Dinners</em>, or <em>Modern Thanksgiving</em></p>
-    <%= render 'form' %>
+    <div>
+      <h2 class="subhead">Box it.</h2>
+      <p id="new-description">Create a Recipe Box to store your favorite recipes by a common theme. Examples: <em>Just Desserts</em>, <em>Comfort Food</em>, <em>Work Week Dinners</em>, or <em>Modern Thanksgiving</em></p>
+      <%= render 'form' %>
+    </div>
 
     <div>
+      <h2 class="subhead">Remove Recipes</h2>
       <% @box.recipes.each do |recipe| %>
-      <h2 class="subhead">Remove Recipes from <%= @box.title %></h2>
       <p class="box-title"><%= link_to recipe.title, remove_from_box_recipe_box_path(recipe.id, @box), method: :delete %></p>
       <% end %>
     </div>
