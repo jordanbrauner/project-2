@@ -2,7 +2,7 @@
 RECIPE#SHOW
 ************************/
 
-#favorite {
+#favorite-off, #favorite-on {
   margin: 0 auto;
   margin-top: 10px;
   height: 30px;
@@ -13,11 +13,21 @@ RECIPE#SHOW
   background-position: center;
   border-radius: 360px;
   border: 1px solid #aeaeae;
-
+  font-size: 1px;
 }
 
-#favorite:hover {
+#favorite-off:hover {
   background-image: url('http://i.imgur.com/PEtNToc.png');
+}
+
+#favorite-on {
+  border: 1px solid red;
+  background-image: url('http://i.imgur.com/PEtNToc.png');
+}
+
+#favorite-on:hover {
+  background-image: url('http://i.imgur.com/RWdnw5a.png');
+  border: 1px solid #aeaeae;
 }
 
 #recipe-content-container {

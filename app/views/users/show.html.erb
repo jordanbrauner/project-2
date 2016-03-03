@@ -104,13 +104,12 @@
     <div class="profile-column">
       <p class="user-profile-column-subhead">Favorites</p>
       <div class="column-list">
-        <p>Table Butter</p>
-        <p>Handful of Cherry Tomatoes</p>
-        <p>Basil Pesto with Pine Nuts</li>
-        <p>Scoobi Doo Pasta</p>
-        <p>Short Pasta of Choice</p>
-        <p>Cherrybomb Sushi</p>
-        <p>Canadian Burrata</p>
+
+        <!-- NOTE May break site -->
+        <% @contributor.favorites.each do |favorite| %>
+          <p><%= link_to favorite.recipe.title, recipe_path(favorite.recipe.id) %></p>
+        <% end %>
+        
       </div>
       <!-- Browse Recipes -->
       <% if current_user == @contributor %>

@@ -3,7 +3,7 @@
 <div class="main-container">
   <section id="recipe-content-container">
 
-    <!-- Details of Recipe -->
+    <!-- Recipe details -->
     <div id="recipe-content">
       <h3 id="recipe-title"><%= @recipe.title %></h2>
       <p id="recipe-description"><%= @recipe.description %></p>
@@ -32,20 +32,35 @@
       <% if current_user %>
         <div class="sidebar-rule"></div>
 
-        <!-- Add this recipe to my box -->
+        <!-- Add to Box -->
         <p class="user-sidebar-subhead" id="black">Dig this recipe?</p>
         <div id="add-to-my-box-container">
 
             <p class="user-sidebar-subhead">Box it</p>
               <% @user.boxes.each do |box| %>
                 <p class="user-sidebar-box-list"><%= link_to box.title, add_to_box_recipe_box_path(@recipe, box.id), method: :post %></p>
-
-                <!-- <p class="user-sidebar-box-list"><%# box.title %></p> -->
-
-
               <% end %>
+
+              <!-- Add to Favorite -->
               <p class="user-sidebar-subhead">Fav it</p>
-            <div id="favorite"></div>
+
+              <% if @favorite %>
+                <%= link_to remove_from_fav_user_favorite_path(@user, @recipe), method: :delete do %>
+                  <div id="favorite-on"></div>
+                <% end %>
+              <% else %>
+                <%= link_to add_to_fav_user_favorite_path(@user, @recipe), method: :post do %>
+                  <div id="favorite-off"></div>
+                <% end %>
+              <% end %>
+
+
+              <!-- <%# if @favorite %>
+                <div id="favorite-on"><%# link_to "-", remove_from_fav_user_favorite_path(@user, @recipe), method: :delete %></div>
+              <%# else %>
+                <div id="favorite-off"><%# link_to "-", add_to_fav_user_favorite_path(@user, @recipe), method: :post %></div>
+              <%# end %> -->
+
       <% end %>
 
       </div>

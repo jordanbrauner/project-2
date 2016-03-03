@@ -14,6 +14,15 @@ Rails.application.routes.draw do
     resources :boxes
   end
 
+  resources :users do
+    resources :favorites do
+      member do
+        post 'add_to_fav'
+        delete 'remove_from_fav'
+      end
+    end
+  end
+
   resources :recipes do
     resources :boxes do
       member do
