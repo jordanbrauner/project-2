@@ -7,8 +7,6 @@ class User < ActiveRecord::Base
 
   has_many :boxes
   has_many :recipes
-
-  # NOTE May break site
-  has_many :favorites
+  has_many :favorites, dependent: :destroy
 
 end
