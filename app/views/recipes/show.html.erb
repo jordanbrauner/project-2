@@ -6,11 +6,11 @@
     <!-- Recipe details -->
     <div id="recipe-content">
       <h3 id="recipe-title"><%= @recipe.title %></h2>
-      <p id="recipe-description"><%= @recipe.description %></p>
+      <p id="recipe-description"><%= h(@recipe.description).gsub(/\n/, '<br/>').html_safe %></p>
       <p class="recipe-show-subhead">Ingredients</p>
-      <p id="recipe-ingredients"><%= @recipe.ingredients %></p>
+      <p id="recipe-ingredients"><%= h(@recipe.ingredients).gsub(/\n/, '<br/>').html_safe %></p>
       <p class="recipe-show-subhead">Directions</p>
-      <p id="recipe-directions"><%= @recipe.directions %></p>
+      <p id="recipe-directions"><%= h(@recipe.directions).gsub(/\n/, '<br/>').html_safe %></p>
 
       <!-- Edit Recipe -->
       <% if current_user == @recipe.user %>

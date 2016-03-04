@@ -42,11 +42,16 @@ form {
   margin-bottom: 10px;
 }
 
-.form-text {
+.form-text, .form-text-area {
   width: 300px;
   height: 35px;
   display: block;
   margin-bottom: 20px;
+  border: 1px solid lightgray;
+}
+
+.form-text-area {
+  height: 70px;
 }
 
 #submit-button {
