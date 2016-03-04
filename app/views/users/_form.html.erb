@@ -1,0 +1,15 @@
+<%= form_for @user do |f| %>
+  <p class="alert"><%= @user.errors.full_messages.first if @user.errors.any? %></p>
+
+  <%= f.label :email, class: "form-label" %>
+  <%= f.text_field :email, class: "form-text" %>
+
+  <%= f.label :username, class: "form-label" %>
+  <%= f.text_field :username, class: "form-text" %>
+
+  <%= f.label :photo_url, class: "form-label" %>
+  <%= f.text_field :photo_url, class: "form-text" %>
+
+  <%= f.submit 'Done', class: "submit-button" %>
+
+<% end %>

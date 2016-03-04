@@ -109,7 +109,7 @@
         <% @contributor.favorites.each do |favorite| %>
           <p><%= link_to favorite.recipe.title, recipe_path(favorite.recipe.id) %></p>
         <% end %>
-        
+
       </div>
       <!-- Browse Recipes -->
       <% if current_user == @contributor %>
@@ -120,6 +120,6 @@
     </div>
   </section>
   <% if current_user == @contributor %>
-    <p class="edit"><%= link_to "Edit Profile", user_path(@user) %></p>
+    <p class="edit"><%= link_to "Edit Profile", edit_user_path(@user) %></p>
   <% end %>
 </div>
