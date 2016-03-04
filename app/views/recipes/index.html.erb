@@ -35,9 +35,12 @@
 
       <!-- Add a Recipe -->
       <div id="add-recipe-rule"></div>
-      <div id="add-recipe-container">
-        <%= link_to "New Recipe", new_recipe_path, id: 'add-recipe' %>
-      </div>
+
+      <%= link_to new_recipe_path do %>
+        <div id="add-recipe-container">
+          <span id="add-recipe">New Recipe</span>
+        </div>
+      <% end %>
 
     </div>
   </section>
