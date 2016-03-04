@@ -10,6 +10,9 @@ The Food Life is a full-stack web app built with Ruby on Rails that allows you t
 * Postgresql
 * jQuery
 
-# On the backlog:
+# Upcoming features:
 
-Features not currently functioning: Boxes, Favorites. The layout is also not fully optimized for responsiveness.
+* Delete user account
+* Responsive layout
+* Design overhaul
+* Social media share buttons for recipes and boxes
