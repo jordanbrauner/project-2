@@ -47,6 +47,7 @@ end
 
 gem 'devise'
 
+# For logging errors when using Heroku
 group :production do
   gem 'rails_12factor'
 end

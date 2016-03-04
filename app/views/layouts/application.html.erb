@@ -8,8 +8,12 @@
     <link href='https://fonts.googleapis.com/css?family=Raleway:400,700,200,300|Vollkorn:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
   </head>
   <body>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
+      <% if flash[:notice] %>
+        <p class="notice flash-container"><%= notice %></p>
+      <% end %>
+      <% if flash[:alert] %>
+        <p class="alert flash-container"><%= alert %></p>
+      <% end %>
     <nav>
       <div id="logo-container">
         <%= link_to 'the food life', recipes_path, id: 'logo' %>

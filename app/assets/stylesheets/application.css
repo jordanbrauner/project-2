@@ -47,6 +47,24 @@ a:hover {
 NAV
 ************************/
 
+.flash-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: 40px;
+  height: 40px;
+  width: 100%;
+  background-color: black;
+  color: white;
+  font-family: sans-serif;
+  font-size: 11px;
+}
+
+.flash:hover, .notice:hover {
+  color: lightgray;
+  cursor: pointer;
+}
+
 nav {
   margin: 0 auto;
   max-width: 820px;
