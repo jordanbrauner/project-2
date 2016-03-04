@@ -1,9 +1,27 @@
-<section id="featured-photo-container" style="background-image:url('<%= @box.recipes.last.photo_url %>');background-position: cover;"></section>
+<section id="featured-photo-container" style="background-image:url('
+  <% if @box.recipes.length > 0 %>
+    <%= @box.recipes.last.photo_url %>
+  <% else %>
+    <%= @recipes.last.photo_url %>
+  <% end %>
+');background-position: cover;"></section>
 <section id="featured-user-recipe-container">
   <div id="featured-user-recipe-wrapper">
-    <span id="featured-user-recipe">Latest Addition to <%= @box.title %></span>
+    <span id="featured-user-recipe">
+        <% if @box.recipes.length > 0 %>
+          Latest Addition to <%= @box.title %>
+        <% else %>
+          Latest Recipe
+        <% end %>
+    </span>
     <span id="name-of-featured-user-recipe">|</span>
-    <span id="name-of-featured-user-recipe"><%= @box.recipes.last.title %></span>
+    <span id="name-of-featured-user-recipe">
+      <% if @box.recipes.length > 0 %>
+        <%= @box.recipes.last.title %>
+      <% else %>
+        <%= @recipes.last.title %>
+      <% end %>
+    </span>
   </div>
 </section>
 

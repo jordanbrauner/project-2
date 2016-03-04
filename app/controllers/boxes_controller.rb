@@ -63,6 +63,17 @@ class BoxesController < ApplicationController
     @box = Box.find(params[:id])
     @box.recipes.push(@recipe)
     redirect_to box_path(@box)
+
+    # NOTE Not working. Problem with box_id?
+    # @recipe = Recipe.find(params[:recipe_id])
+    # @box = Box.find(params[:id])
+    # if @box.recipes.find(@recipe.id)
+    #   redirect_to box_path(@box)
+    # else
+    #   @box.recipes.push(@recipe)
+    #   redirect_to box_path(@box)
+    # end
+
   end
 
   def remove_from_box
