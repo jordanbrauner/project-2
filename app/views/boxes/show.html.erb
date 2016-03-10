@@ -31,7 +31,7 @@
   <!-- Box contents -->
   <div id="recipe-content">
     <h3 id="recipe-title"><%= @box.title %></h2>
-    <p id="recipe-description"></p>
+    <p id="recipe-description"><%= @box.description %></p>
 
     <!-- Recipes in Box -->
     <% @box.recipes.each do |recipe| %>

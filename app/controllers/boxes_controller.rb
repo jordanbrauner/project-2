@@ -27,8 +27,8 @@ class BoxesController < ApplicationController
 
   def edit
     @box = Box.find(params[:id])
-    @recipes = Recipe.all
-    @recipe = Recipe.find(params[:id])
+    # @recipes = Recipe.all
+    # @recipe = Recipe.find(params[:id])
   end
 
   def update
@@ -92,7 +92,7 @@ class BoxesController < ApplicationController
 
   private
   def box_params
-    params.require(:box).permit(:title, :user_id)
+    params.require(:box).permit(:title, :description, :user_id)
   end
 
 end
