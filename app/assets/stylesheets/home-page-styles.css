@@ -30,8 +30,8 @@ MAIN - QUOTE
 ************************/
 
 #quote-container {
-  min-height: 180px;
-  background-color: #efeff0;
+  min-height: 200px;
+  background-color: #f3f3f4;
 }
 
 #quote-wrapper {

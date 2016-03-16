@@ -1,21 +1,32 @@
 <div class="main-container">
-
   <section id="new-recipe-container">
-    <%= image_tag 'rice-pot.jpg', id: 'new-form-image' %>
-    <div>
+
+    <!-- Left column -->
+    <div class="l-col">
+
+      <!-- Form -->
       <h2 class="subhead">Box it.</h2>
       <p id="new-description">Create a Recipe Box to store your favorite recipes by a common theme. Examples: <em>Just Desserts</em>, <em>Comfort Food</em>, <em>Work Week Dinners</em>, or <em>Modern Thanksgiving</em></p>
-      <%= render 'form' %>
+      <div id="form-container">
+        <%= render 'form' %>
+      </div>
+
+      <!-- Remove recipes from box -->
+      <div>
+        <h2 class="subhead">Remove Recipes</h2>
+        <% @box.recipes.each do |recipe| %>
+        <p class="box-title"><%= link_to recipe.title, remove_from_box_recipe_box_path(recipe.id, @box), method: :delete %></p>
+        <% end %>
+      </div>
     </div>
 
-    <div>
-      <h2 class="subhead">Remove Recipes</h2>
-      <% @box.recipes.each do |recipe| %>
-      <p class="box-title"><%= link_to recipe.title, remove_from_box_recipe_box_path(recipe.id, @box), method: :delete %></p>
-      <% end %>
+    <!-- Right column -->
+    <div class="r-col">
+      <%= image_tag 'rice-pot.jpg', id: 'new-form-image' %>
+      <p>Remember the food, remember the love.</p>
     </div>
   </section>
 
-  <%= link_to 'Delete Box', box_path(@box), method: :delete, class: 'edit' %>
+  <div id="delete-recipe-link"><%= link_to 'Delete Box', box_path(@box), method: :delete, class: 'edit' %></div>
 
 </div>

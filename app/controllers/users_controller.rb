@@ -20,6 +20,14 @@ class UsersController < ApplicationController
     end
   end
 
+  def destroy
+    if @user == current_user
+      @user.destroy
+      flash[:notice] = "#{@user.username} has been deleted."
+      redirect_to recipes_path
+    end
+  end
+
   def user_vars
     @user = current_user
     @recipes = Recipe.all

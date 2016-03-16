@@ -1,5 +1,4 @@
 <%= form_for @recipe do |f| %>
-  <p class="alert"><%= @recipe.errors.full_messages.first if @recipe.errors.any? %></p>
 
   <%= f.label :title, class: "form-label" %>
   <%= f.text_field :title, class: "form-text" %>
@@ -17,5 +16,7 @@
   <%= f.text_area :directions, class: "form-text-area" %>
 
   <%= f.submit 'Done', class: "submit-button" %>
+
+  <p class="alert"><%= @recipe.errors.full_messages.first if @recipe.errors.any? %></p>
 
 <% end %>

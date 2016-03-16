@@ -1,12 +1,15 @@
 <div class="main-container">
   <section id="new-recipe-container">
-    <%= image_tag 'rice-pot.jpg', id: 'new-form-image' %>
-    <h2 class="subhead">Cook it.</h2>
-    <%= render 'form' %>
+    <div class="l-col">
+      <h2 class="subhead">Cook it.</h2>
+      <%= render 'form' %>
+    </div>
+    <div class="r-col">
+      <%= image_tag 'rice-pot.jpg', id: 'new-form-image' %>
+      <p>Share the food, share the love.</p>
+    </div>
   </section>
 
-  <div class="new-recipe-container">
-    <%= link_to 'Delete Recipe', recipe_path(@recipe), method: :delete, class: 'edit' %>
-  </div>
+  <div id="delete-recipe-link"><%= link_to 'Delete Recipe', recipe_path(@recipe), method: :delete, class: 'edit' %></div>
 
 </div>

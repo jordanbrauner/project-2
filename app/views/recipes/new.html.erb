@@ -1,5 +1,15 @@
-<section id="new-recipe-container">
-  <%= image_tag 'rice-pot.jpg', id: 'new-form-image' %>
-  <h2 class="subhead">Cook it.</h2>
-  <%= render 'form' %>
-</section>
+<div class="main-container">
+  <section id="new-recipe-container">
+
+    <div class="l-col">
+      <h2 class="subhead">Cook it.</h2>
+      <%= render 'form' %>
+    </div>
+
+    <div class="r-col">
+      <%= image_tag 'rice-pot.jpg', id: 'new-form-image' %>
+      <p>Share the food, share the love.</p>
+    </div>
+
+  </section>
+</div>
